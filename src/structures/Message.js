@@ -42,6 +42,13 @@ class Message extends Base {
          */
         this.hasMedia = data.clientUrl || data.deprecatedMms3Url ? true : false;
 
+
+        // NEW!
+        /** File size
+          * @type {?number}
+          */
+        this.filesize = this.hasMedia ? data.size : null; 
+
         /**
          * Message content
          * @type {string}
